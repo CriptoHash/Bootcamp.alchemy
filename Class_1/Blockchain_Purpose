@@ -11,3 +11,27 @@ Propósito do blockchain
 	Não há um único proprietário da execução do código
 		- O código sempre é executado conforme programado
 		- o código é verificável de forma transparente
+
+Blockchain Network
+
+	Blockchain: protocolo que conecta essas máquinas.
+	Cada máquina ou "nó" na rede executará o código conforme ele for escrito.
+	A blockchain aplica essas regras.
+	Desde que o programa é aplicado, ele é chamado de "contrato inteligente"
+	
+Bitcoin: Ther First
+
+	Bitcoin foi o primeiro blockchain e criptomoeda bem-sucedido.
+	Mas, houve muita pesquisa e muitas tentativas antes disso!
+	A maioria dos componentes já foram descobertos.
+	
+Como funciona?
+
+	Prova de trabalho - Segurança
+	Recompensas de mineração - Incentivos financeiros
+	Criptografia de chave pública - Autenticação
+	Estrutura de dados vinculados - Cronologia
+	Rede ponto a ponto - Sem permissão
+
+		Esses componentes trabalham juntos em conjunto.
+		A descentralização emerge de uma rede configurada corretamente.
