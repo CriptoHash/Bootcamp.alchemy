@@ -1,0 +1,20 @@
+Blockchains de contratos inteligentes
+
+	As blockchains de Smart Contract fornecem aos desenvolvedores uma maneira de descentralizar onde o código é executado. Dessa forma, o código pode realmente se tornar um recurso público. Isso significa que o código pode ser executado sem nenhuma propriedade direta, tornando-o resistente à censura e transparentemente verificável.
+
+	Vale observar que a descentralização não é sobre o código em si, mas como o código é executado. 
+	
+		Por exemplo, vamos analisar um simples código de contrato inteligente Solidity:
+			
+			// essa estrutura de dados manterá o controle de qual endereço tem saldo
+			mapping(address => uint) balances;
+
+			function transfer(address to, uint amount) external {
+			  // subtrair o valor do saldo do remetente
+			  balances[msg.sender] -= amount;
+
+			  // adicione o valor ao saldo do destinatário
+			  balances[to] += amount;
+			}
+
+	Esta função é o pão com manteiga dos tokens ERC20, que é transferfunção aqui do ponto de vista da programação. 
