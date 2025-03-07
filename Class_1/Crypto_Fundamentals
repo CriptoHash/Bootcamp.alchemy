@@ -1,0 +1,55 @@
+Crypto	
+
+	Muito antes da criptomoeda, havia cripto
+	Dois primitivos importantes para nossos propósitos:
+		- Hashes criptográficos
+		- Criptografia de chave pública
+		
+Função Hash
+
+	Uma função hash pega uma entrada de qualquer tamanho e a transforma em uma saída de tamanho fixo. 
+	- Vamos imaginar uma função hash que pega uma entrada de qualquer tamanho e retorna uma saída fixa de 32 bytes:
+
+	Hash: Dê-me alguma entrada, grande ou pequena, e eu lhe darei uma saída de tamanho fixo.
+
+	- A entrada pode ser qualquer tipo de dado: 
+		número: Ex: entrada: 42, saída: 0x41cf...;
+		string: Ex: entrada: "happy", saída: 0xd6bf...; 
+		imagem: Ex: entrada: imagem.png, saída: 0x7cde...; 
+		vídeo: Ex: entrada: video.mp4, saída: 0x9c0e...; 
+		etc.
+		
+		 Explicando melhor:
+			Entrada:			Tamanho da entrada:		Saída:			Tamanho da saída
+			52					8 bytes					0x41cf...		32 bytes
+			"tempos felizes"	22 bytes				0xd6bf...		32 bytes
+			monalisa.jpg		875000 bytes			0x7cde...		32 bytes
+			série mundial.mp4	1,6e+10 bytes			0x9c0e...		32 bytes
+		
+Funções de Hash Criptográficas
+
+	Os tipos específicos de funções hash em que vamos abordar são funções hash criptográficas.
+		- Essas funções hash precisam de cinco propriedades específicas.
+
+	Um hash criptográfico é uma função com estas propriedades:
+	
+		- Determinística:
+			- Uma entrada específica sempre mapeia para a mesma saída específica.
+			
+		- Pseudoaleatória:
+			- Não é possível adivinhar a saída com base na saída de entradas semelhantes.
+			
+		- Unidirecional:
+			- Se alguém lhe der uma nova saída, você não poderá determinar uma entrada sem adivinhar.
+		
+		- Rápida de Calcular
+			- Deve ser um cálculo rápido para um computador.
+			
+		- Resistente a Colisões
+			- A chance de uma colisão deve ser infinitesimalmente pequena.
+	
+		SHA256 é uma dessas funções que fornece uma saída de 256 bits
+		
+	Dois casos de uso importantes para funções Hash para nós:
+		1. Compromissos (Protocolo e Contrato Inteligente)
+		2. Prova de Trabalho
