@@ -1,0 +1,13 @@
+Propósito do blockchain
+
+	- O propósito de um blockchain é ter uma rede de computadores concordando com um estado comum de dados de forma simples e clara.
+	- Qualquer pessoa ou organização deve ser capaz de participar deste processo.
+	- Nenhuma pessoa ou organização deve ser capaz de controlar este processo.
+
+		Com um blockchain, podemos descentralizar onde o código é executado e concordar com a saída.
+		
+			Geralmente, o termo consenso é usado para descrever uma rede chegando a um acordo sobre o estado dos dados. 
+
+	Não há um único proprietário da execução do código
+		- O código sempre é executado conforme programado
+		- o código é verificável de forma transparente
