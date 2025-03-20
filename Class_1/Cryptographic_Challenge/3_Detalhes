@@ -1,0 +1,13 @@
+	Mesa Arco-Íris
+	Uma tabela rainbow é simplesmente uma tabela que mapeia entradas comuns para suas saídas de hash. Por exemplo, poderíamos mapear senhas comuns para seus hashes SHA256:
+
+		Senhas comuns	Hash SHA256
+		senha			0x5e8848...1542d8
+		QWERTY (QWERTY)	0x65e84b...2337c5
+		111111			0xbcb15f...09802a
+		12345678		0xef797c...98a64f
+		abc123			0x6ca13d...118090
+		
+		Mesmo que a senha seja impossível de adivinhar, dada uma saída de hash, essas senhas comuns facilitam a criação de uma tabela rainbow para descobrir qual seria a entrada de texto simples.
+
+			Se uma empresa perdesse seu banco de dados de senhas (o que acontece com muita frequência ) e não protegesse seus hashes de senha com um salt, pode ser relativamente fácil para um hacker usar uma tabela rainbow para descobrir quais senhas você usa. A partir daí, eles podem tentar essas senhas em outros serviços.
