@@ -1,0 +1,15 @@
+Seu objetivo: Hash da mensagem
+
+  A biblioteca noble-secp256k1 (v 1.7.1) nos fornece toda a criptografia que precisaremos ao longo deste curso. 
+  
+  Vamos usar o keccak256hash e utf8ToBytesa função.
+  
+  Observe que este tutorial exigirá funções documentadas na release version 1.7.1biblioteca noble-secp256k1.
+  
+  Quaisquer outros links neste tutorial vincularão diretamente à versão 1.7.1da noble-secp256k1 documentação.
+  
+  Seu primeiro passo é pegar a string message passada e transformá-la em um array de bytes UTF-8.
+  
+  Você pode fazer isso com a utf8ToBytesfunção.
+  
+  Então pegue o keccak256hash desses bytes e retorne esse valor.
