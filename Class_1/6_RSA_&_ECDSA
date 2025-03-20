@@ -1,0 +1,63 @@
+RSA e ECDSA
+
+  O algoritmo RSA é baseado na ideia de que é muito fácil encontrar o produto de dois números primos, mas extremamente difícil fatorar esses dois números primos se você tiver o produto.
+
+    O algoritmo RSA (Rivest-Shamir-Adleman) é um dos sistemas de criptografia mais usados no mundo para garantir a segurança das comunicações digitais.
+      Ele é baseado na dificuldade de fatorar números primos muito grandes, tornando-o seguro contra ataques de força bruta.
+
+        Como funciona o RSA?
+
+          1️⃣- Geração das chaves:
+            - Escolhem-se dois números primos grandes 𝑝 e q.
+            - Calcula-se 𝑛 = 𝑝 × 𝑞, que será a chave pública.
+            - Determina-se 𝜙(𝑛)=(𝑝−1)×(𝑞−1).
+            - Escolhe-se um número '𝑒' (exponente público) que seja coprimo a  𝜙(𝑛).
+            - Calcula-se '𝑑', o exponente privado, tal que (𝑒×𝑑) mod 𝜙(𝑛)=1.
+
+          2️⃣- Criptografia:
+
+            A mensagem 𝑀 é convertida em um número e elevada ao expoente 𝑒, sendo cifrada como:
+              C = 𝑀^e mod 𝑛
+
+          3️⃣- Descriptografia:
+
+            Para recuperar a mensagem original, usa-se a chave privada 𝑑:
+              𝑀 = C^𝑑 mod 𝑛
+        Usos do RSA:
+          🔹 Criptografia de e-mails e mensagens
+          🔹 Assinaturas digitais
+          🔹 Proteção de transações financeiras
+          🔹 Segurança em conexões HTTPS
+
+  O algoritmo ECDSA usa curvas elípticas.
+
+    ECDSA (Elliptic Curve Digital Signature Algorithm)
+    curva elíptica (ECC – Elliptic Curve Cryptography)
+    Ele pode fornecer o mesmo nível de segurança que outros algoritmos de chave pública com tamanhos de chave menores, razão pela qual ele se tornou bastante popular.
+    É o Algoritmo de Assinatura Digital usado pelo Bitcoin(especificamente a curva secp256k1), Ethereum, certificados SSL/TLS e autenticação segura., especificamente a curva secp256k1.
+
+    ⚡ Principais Características do ECDSA
+      🔹 Segurança com chaves menores – Oferece o mesmo nível de segurança do RSA, mas com tamanhos de chave menores. Uma chave ECDSA de 256 bits equivale a uma chave RSA de 3072 bits.
+      🔹 Eficiência – Requer menos processamento e consumo de energia, sendo ideal para dispositivos móveis e IoT.
+      🔹 Baseado em curvas elípticas – A segurança do ECDSA vem da dificuldade de resolver o problema do logaritmo discreto em curvas elípticas (ECDLP - Elliptic Curve Discrete Logarithm Problem).
+  
+     Como o ECDSA Funciona?
+      1️⃣ Geração de Chaves
+        - Escolhe-se uma curva elíptica apropriada e um ponto gerador 𝐺.
+        - A chave privada é um número aleatório 𝑑.
+        - A chave pública é calculada como 𝑄 = 𝑑 × 𝐺.
+
+      2️⃣ Assinatura Digital
+        Para assinar uma mensagem 𝑀:
+          - Calcula-se um hash 𝐻(𝑀).
+          - Um número aleatório 𝑘 é gerado e usado para calcular valores  𝑟 e 𝑠, que formam a assinatura digital.
+
+      3️⃣ Verificação da Assinatura
+        - O receptor usa a chave pública para verificar se a assinatura (𝑟,𝑠) corresponde ao hash da mensagem, garantindo sua autenticidade.
+
+🔥 ECDSA vs. RSA
+      🔹Característica	                  ECDSA	                  RSA
+      🔹Segurança com chaves menores	    ✅ Sim 	              ❌ Não
+      🔹Performance	                      ✅ Mais rápido	        ❌ Mais lento
+      🔹Uso em Blockchain	                ✅ Sim 	                ❌ Não muito usado
+      🔹Complexidade Matemática          🔥 Curvas elípticas     🔢 Baseado na fatoração de primos
