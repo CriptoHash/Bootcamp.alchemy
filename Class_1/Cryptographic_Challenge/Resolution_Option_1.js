@@ -1,5 +1,4 @@
-Index.js
-
+// name Resolution = Index.js
 // Resolução Modelo 1
 
 const { sha256 } = require("ethereum-cryptography/sha256");
