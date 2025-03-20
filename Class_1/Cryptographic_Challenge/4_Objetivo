@@ -1,0 +1,26 @@
+Seu objetivo: encontrar a cor
+	
+	Dado um hash SHA256, encontre a entrada de cor que geraria esse hash.
+	Você pode assumir que todos os hashes seriam gerados somente a partir de cores fornecidas no COLORSarray.
+
+		- Para obter o hash de uma cor, primeiro use utf8ToBytespara traduzir a string para bytes. 
+		- Depois, use sha256para fazer o hash dela.
+		- Quando você quiser comparar dois hashes, primeiro use toHexpara transformar cada hash de um Uint8Array em uma sequência de caracteres hexadecimais.
+		
+		Então, comparar dois hashes ficaria assim:
+
+			const a = "apple";
+			const b = "banana";
+
+			const aBytes = utf8ToBytes(a);
+			const bBytes = utf8ToBytes(b);
+
+			const aHash = sha256(aBytes);
+			const bHash = sha256(bBytes);
+
+			console.log(toHex(aHash) === toHex(aHash)); // true
+			console.log(toHex(aHash) === toHex(bHash)); // false
+			
+				Quer saber o que utf8 significa? 
+					- O padrão UTF-8 traduz todos os caracteres de teclado possíveis que você pode imaginar em bytes. 
+					- Este é um padrão acordado para garantir que todos nós tenhamos os mesmos valores de bits representando as letras e palavras que vemos na tela.
