@@ -1,0 +1,10 @@
+Hash de Força Bruta
+	Funções Hash Criptográficas como SHA256 são funções unidirecionais. 
+	Isso significa que se você tem a entrada, é relativamente trivial encontrar a saída. Por outro lado, se você tem a saída, é inviável encontrar a entrada.
+
+	No entanto, se você conhecesse os hashes de algumas entradas comuns, poderia usar força bruta para adivinhar a saída ou criar uma Tabela Arco-Íris para determinar qual é essa entrada.
+
+	É fácil descobrir que o hash SHA256 de "apples" é 0xf5903f...0f74d9. 
+	Se essa fosse uma entrada provável, um hacker poderia procurá-la especificamente e saber que a entrada era "apples"!
+
+	Por motivos de segurança, é importante lembrar de usar um salt aleatório que você pode adicionar à sua entrada para torná-la indecifrável através dos métodos mencionados acima!
