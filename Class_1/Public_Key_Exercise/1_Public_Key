@@ -1,0 +1,15 @@
+Vamos aprender criptografia de chave pública aplicando-a!
+
+Nesta série de exercícios, focaremos na Criptografia de Chave Pública com ECDSA (Elliptic Curve Digital Signature Algorithm).
+
+O algoritmo específico que usaremos é secp256k1, que é a curva usada para Bitcoin e Ethereum. 
+
+Este conjunto de exercícios de código será instrumental para entender como podemos usar a criptografia de chave pública durante o resto do curso. 
+
+Você aprenderá como assinar uma mensagem com hash, recuperar a chave pública da assinatura e transformar a chave pública no endereço ethereum do usuário.
+
+Esses conceitos nos ajudarão a entender como o protocolo blockchain funciona e nos fornecerão as ferramentas para usar autenticação de assinatura digital quando precisarmos provar a intenção de um usuário. 
+
+Esse será um conhecimento crucial ao construir aplicativos que interagem com blockchain, bem como contratos inteligentes no blockchain.
+
+Vamos começar!
