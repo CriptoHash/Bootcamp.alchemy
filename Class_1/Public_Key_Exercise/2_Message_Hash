@@ -1,0 +1,14 @@
+Mensagens de hash
+  O primeiro passo no ECDSA é fazer o hash da mensagem antes de aplicar o algoritmo de assinatura. 
+  Então, se você quisesse assinar uma mensagem com um dos seus pares de chaves dizendo que você "Vote Sim na Proposta 327", o primeiro passo seria fazer o hash desta mensagem:
+
+// transforme isso em uma matriz de bytes, o formato esperado para o algoritmo de hash
+const bytes = utf8ToBytes("Vote Yes on Proposal 327");
+// hash da mensagem usando keccak256
+const hash = keccak256(bytes); 
+
+console.log(toHex(hash)); // 928c3f25193b338b89d5646bebbfa2436c5daa1d189f9c565079dcae379a43be
+
+  Depois que tivermos o hash da mensagem, podemos assiná-lo com nossa chave privada para provar que um endereço específico vota sim na proposta 327. 
+  Você pode ter se pegado fazendo algo semelhante se já assinou uma mensagem no web3. 
+  Quando você envia uma transação para um blockchain, você também assina uma representação hash dessa transação antes de enviá-la para um nó de blockchain.
