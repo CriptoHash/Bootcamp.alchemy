@@ -1,0 +1,75 @@
+Criptografia Historicamente
+
+  Historicamente, até a década de 1970, a criptografia era o estudo de criptografar mensagens para que elas não pudessem ser descriptografadas mesmo se interceptadas. 
+
+  A criptografia era usada para passar segredos importantes, especialmente dentro do exército.
+    O remetente pegaria sua mensagem e a passaria por uma função para criar uma saída criptografada.
+
+  Isso poderia ser algo tão simples quanto mover cada caractere em uma sequência uma posição abaixo no alfabeto. 
+    Por exemplo, "abc" se torna "bcd". 
+      Essa função não é particularmente difícil de quebrar, especialmente quando você sabe seu segredo!
+
+  Conforme a criptografia avançou ao longo dos anos, funções mais complexas foram introduzidas para esconder melhor as mensagens. Um salto importante foi a ideia de uma chave secreta .
+  
+  Se duas partes puderem se encontrar antes de sua troca de mensagens, ambas podem chegar a um acordo sobre uma chave específica. Essa chave mais uma função (como a mudança de alfabeto mencionada acima) poderiam ser usadas juntas para criar uma criptografia mais segura.
+  
+  Ter chaves em ambos os lados da mensagem é considerado criptografia de chave simétrica .
+
+    Abaixo alguns momentos históricos onde fora utilizados criptografia.
+
+      1. Guerra de César (Século I a.C.)
+        Júlio César usava um método de criptografia conhecido como Cifra de César, onde as letras do alfabeto eram deslocadas um certo número de posições. 
+        Esse método simples ajudava a proteger ordens militares e comunicações estratégicas.
+      
+      2. Máquina Enigma e a Segunda Guerra Mundial (1939-1945)
+        A Alemanha nazista utilizava a Máquina Enigma para criptografar mensagens militares. 
+        A quebra desse código pelos aliados, liderada por Alan Turing e sua equipe em Bletchley Park, foi um dos fatores que ajudaram a encurtar a guerra.
+      
+      3. Código Navajo na Segunda Guerra Mundial
+        Os Estados Unidos usaram falantes da língua navajo para criar um código praticamente indecifrável.
+        Como a gramática e vocabulário da língua eram desconhecidos fora das tribos, os japoneses nunca conseguiram decifrá-lo.
+      
+      4. Criptografia na Guerra Fria (1947-1991)
+        Durante a Guerra Fria, Estados Unidos e União Soviética usaram intensivamente criptografia para proteger comunicações de espionagem e operações militares.
+        Um exemplo famoso foi o uso do one-time pad, um dos únicos sistemas de criptografia teoricamente inquebráveis.
+      
+      5. Criptografia na Era Digital e o Caso Snowden (2013)
+        Em 2013, Edward Snowden revelou que a NSA (Agência de Segurança Nacional dos EUA) monitorava comunicações globais, o que impulsionou a adoção de criptografia de ponta a ponta em aplicativos como WhatsApp e Signal, protegendo comunicações privadas de governos e empresas.
+
+Computação Particular
+
+  Como mencionamos acima, a criptografia de última geração alcançava versões cada vez mais complexas da criptografia de chave simétrica.
+  O intuito era evitar que seu adversário nunca soubesse sua chave.
+    Isso levando em conta que no passado com as questões de guerra, muitos paises faziam de tudo para inteceptar e quebrar as chaves de seus inimigos militares, e descobrir seus planos.
+
+  Com o avanço e ampliação da tecnologia em dispositivos pessoais no horizonte, alguns criptógrafos começaram a buscar novas soluções. 
+    As pessoas gostariam de poder se comunicar umas com as outras com segurança, sem ter que se preocupar com a perda da privacidade e exposição de suas vidas.   
+    Claro, eles poderiam se encontrar em algum lugar pessoalmente e trocar chaves sempre que as pessoas quisessem falar com segurança, o que era algo arcaico. 
+      Isso fez os criptógrafos pensarem: como duas partes poderiam se comunicar com segurança sem se encontrarem antes para trocar chaves
+
+    Em 1976, Whitfield Diffie propôs a criação de uma chave pública.
+      Mas os a comunidade de criptografos rejeitaram essa idéia, visto que eles entendiam que uma chave de criptografia deveria ser privada.
+
+Reflexão mental sobre conceito criptografico
+
+  Digamos que há uma chave privada que pode descriptografar uma mensagem de uma chave pública e vice-versa.
+  Cada chave é a única chave que pode descriptografar uma mensagem criptografada pela outra chave.
+
+  Agora imagine que Bob declarou uma chave pública por toda parte como a chave que o identifica.
+  Bob manterá uma chave privada que corresponde à sua chave pública.
+  Quando ele usa sua chave privada para criptografar uma mensagem, ele pode compartilhá-la publicamente para ser descriptografada usando sua chave pública.
+  Ao descriptografar esta mensagem, podemos dizer sem sombra de dúvida que somente Bob poderia ter escrito esta mensagem.
+  A única chave que poderia ter criptografado a mensagem é a chave privada correspondente à qual somente Bob tem acesso. 
+  Na prática, isso criaria uma assinatura digital infalsificável para Bob.
+
+  Por outro lado, e se uma mensagem fosse criptografada usando a chave pública de Bob? Claro, qualquer um pode fazer isso, já que a chave pública de Bob está disponível para todos.
+  O benefício vem em que somente Bob pode descriptografar a mensagem.
+  Dessa forma, um amigo de Bob pode escrever uma mensagem que só pode ser lida por Bob.
+  Eles poderiam enviá-la por qualquer rede, independentemente de sua segurança, desde que chegasse a Bob.
+  Eles poderiam ter certeza de que ninguém seria capaz de descriptografar a mensagem, exceto Bob.
+
+Essa reflexão acima foi a percepção que atingiu Whitfield Diffie em 1976. 
+    O único problema era que ele não tinha nenhuma maneira prática de fazer isso acontecer.
+    Ele tinha um conceito, mas não tinha uma função matemática com essas propriedades! 
+    Diffie trabalharia com Martin Hellman e Ralph Merkle em busca de tal sistema.
+
