@@ -1,3 +1,5 @@
+// Criado por mim e adicionado algumas linha de correções auxiliares
+
 const secp = require("ethereum-cryptography/secp256k1");
 const hashMessage = require('./hashMessage');// retorna um hash válido
 //const { hexToBytes } = require("ethereum-cryptography/utils");
