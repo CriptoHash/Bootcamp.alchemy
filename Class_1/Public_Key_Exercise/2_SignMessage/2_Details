@@ -2,7 +2,7 @@ Usando options para retornar um recoveryBit
 
 A sintaxe para o terceiro parâmetro opcional da função secp sign é um pouco complicada de acertar...
 
-Veja como usar corretamente o terceiro parâmetro para retornar um recoveryBit do processo de assinatura - que mais tarde será usado para recuperar uma chave pública usando apenas messageHash, signaturee recoveryBit:
+Veja como usar corretamente o terceiro parâmetro para retornar um recoveryBit do processo de assinatura - que mais tarde será usado para recuperar uma chave pública usando apenas messageHash, signature e recoveryBit:
 
   return secp.sign(messageHash, PRIVATE_KEY, { recovered: true });
   
