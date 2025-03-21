@@ -1,0 +1,10 @@
+Script de assinatura aprovado no teste
+
+should return both a signature and a recovery bit
+  Test Passed
+
+should have been signed by the same private key
+  Test Passed
+
+
+    
