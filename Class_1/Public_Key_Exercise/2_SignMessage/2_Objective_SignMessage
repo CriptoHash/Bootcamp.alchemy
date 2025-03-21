@@ -1,0 +1,18 @@
+Vamos assinar uma mensagem!
+
+1️⃣ - O primeiro passo é fazer o hash usando a hashMessagefunção que você criou no último estágio (nós já a importamos para você na linha 2(const hashMessage = require('./hashMessage');))
+
+2️⃣ - Depois de obter o hash da mensagem, use o sign método da biblioteca noble-secp256k1 .
+
+3️⃣ - O signmétodo pega um terceiro parâmetro opcional chamado options, que você verá na documentação. Use esse parâmetro para retornar o bit recuperado para que a chave pública possa ser recuperada dessa assinatura.
+
+Observação:
+
+  O sign método pegará seu hash de mensagem junto com a constante PRIVATE_KEY declarada no topo do arquivo. 
+  Esta chave privada é uma chave válida que pode ser usada para autorizar transações de blockchain. 
+  Nunca use esta chave específica porque ela é publicada na internet, então muitas pessoas, incluindo você, podem se autenticar com esta chave privada específica. 
+  Em lições futuras, discutiremos uma boa higiene de chave privada para evitar perda de fundos.
+
+
+
+ 
