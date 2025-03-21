@@ -1,0 +1,9 @@
+É hora de assinar uma mensagem usando nossa chave privada para provar nossa intenção!
+
+Ao assinar uma mensagem com secp256k1, podemos retornar a assinatura junto com o bit de recuperação , permitindo-nos recuperar a chave pública da assinatura. 
+
+Isso permitirá que um nó de blockchain pegue uma assinatura de uma transação e entenda qual endereço autenticou essa transação em particular.
+
+Este é um ponto importante, uma transação de blockchain não apenas indica a intenção da pessoa que a assinou, mas também a autentica por meio de criptografia de chave pública! 
+
+Veremos isso mais claramente quando começarmos a assinar transações em lições futuras.
