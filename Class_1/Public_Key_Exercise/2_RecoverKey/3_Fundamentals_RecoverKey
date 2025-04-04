@@ -1,0 +1,26 @@
+recoverPublicKey(hash, signature, recovery)
+
+	function recoverPublicKey(
+	  msgHash: Uint8Array | string,
+	  signature: Uint8Array | string,
+	  recovery: number,
+	  isCompressed = false
+	): Uint8Array | undefined;
+	
+	Recupera chave pública de hash de mensagem, assinatura e bit de recuperação. O padrão é chave completa de 65 bytes.
+
+		- msgHash: Uint8Array | string- hash da mensagem que seria assinada
+		- signature: Uint8Array | string | { r: bigint, s: bigint }- objeto retornado pela signfunção
+		- recovery: number- bit de recuperação retornado por signcom recoveredopção
+		- isCompressed = falsedetermina se deve retornar uma chave compacta (33 bytes) ou completa (65 bytes)
+		
+	A chave pública é gerada fazendo multiplicação escalar de um Point(x, y) base por um inteiro fixo.
+	O resultado é outro Point(x, y)que codificaremos por padrão para hex Uint8Array.
+	Se a assinatura for inválida - a função retornará undefinedcomo resultado.
+	Para obter a instância Point, use Point.fromSignature(hash, signature, recovery).
+
+Conteudo utilizado para consolidação de material para estudo apenas.
+
+Licença
+MIT (c) Paul Miller (https://paulmillr.com) , consulte o arquivo LICENSE.}
+Link: https://github.com/paulmillr/noble-secp256k1/blob/1.7.1/README.md
