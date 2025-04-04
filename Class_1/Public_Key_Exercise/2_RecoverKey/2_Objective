@@ -4,5 +4,5 @@ objetivo: recuperação da chave
 	Dado um message, signature, e recoveryBitencontre a chave pública e retorne-a! 
 	  - Certifique-se de fazer o hash da mensagem ao passá-la para o método de recuperação.
 	  - Use a documentação da biblioteca noble-secp256k1 para encontrar o método e os parâmetros corretos para isso.
-
+		- Link da documentação (https://github.com/paulmillr/noble-secp256k1/tree/1.7.1)
 		    Lembre-se de verificar version 1.7.1a documentação da biblioteca!
