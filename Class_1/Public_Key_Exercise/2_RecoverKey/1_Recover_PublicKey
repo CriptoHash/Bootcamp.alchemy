@@ -1,0 +1,7 @@
+Recuperar a chave pública
+
+	Quando a assinatura é passada com todos os seus componentes (bit de recuperação incluído), a chave pública pode ser recuperada. 
+
+		Isso significa que os nós do blockchain serão capazes de entender quem assinou a transação que foi enviada a eles. 
+		Uma transação pode indicar que o usuário gostaria de enviar 1 ether para outro endereço e fornecer uma certa taxa de transação. 
+		Como a assinatura assina o hash contendo essa intenção, é suficiente autenticar essa ação inteiramente.
