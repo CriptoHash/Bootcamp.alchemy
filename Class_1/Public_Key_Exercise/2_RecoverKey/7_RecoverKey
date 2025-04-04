@@ -1,0 +1,35 @@
+// *Criado conforme o exercicio de recuperação de chave publica
+
+const secp = require("ethereum-cryptography/secp256k1");
+const hashMessage = require("./hashMessage");
+
+async function recoverKey(
+    messageHash, // Pode ser uma string ou um Uint8Array
+    signature,   // Uint8Array ou string
+    recoveryBit, // number
+    isCompressed = false
+) {
+    // Se messageHash for uma string (como "hello world"), converta para hash
+    if (typeof messageHash === "string") {
+        //console.warn("messageHash recebido como string, convertendo para hash...");
+        messageHash = hashMessage(messageHash); // Agora `messageHash` será um Uint8Array
+    }
+
+    // Se signature for uma string, converta para Uint8Array
+    if (typeof signature === "string") {
+        signature = Uint8Array.from(Buffer.from(signature, "hex"));
+    }
+
+    try {
+        // Recupera a chave pública
+        const publicKey = secp.recoverPublicKey(messageHash, signature, recoveryBit);
+
+        // Retorna chave pública comprimida se necessário
+        return isCompressed ? secp.getPublicKey(publicKey, true) : publicKey;
+    } catch (error) {
+        console.error("Erro na recuperação da chave pública:", error);
+        return undefined;
+    }
+}
+
+module.exports = recoverKey;
