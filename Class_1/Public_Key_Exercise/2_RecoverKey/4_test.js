@@ -1,16 +1,20 @@
 //Teste blockeado apra edição
-const { keccak256 } = require("ethereum-cryptography/keccak");
-const { utf8ToBytes, toHex } = require("ethereum-cryptography/utils");
+const signMessage = require('../signMessage');
+const recover = require('../recoverKey');
+const secp = require("ethereum-cryptography/secp256k1");
+const { assert } = require('chai');
+const { toHex } = require("ethereum-cryptography/utils");
 
-function hashMessage(helloWorldHex) {
+const PRIVATE_KEY = "6b911fd37cdf5c81d4c0adb1ab7fa822ed253ab0ad9aa18d77257c88b29b718e";
 
-    // turn this into an array of bytes, the expected format for the hash algorithm
-    const bytes = utf8ToBytes(helloWorldHex);
-    // hash the message using keccak256
-    const hash = keccak256(bytes);
+describe('Recover Key', () => {
+    it('should recover the public key from a signed message', async () => {
+        const [sig, recoveryBit] = await signMessage('hello world');
 
-    console.log(toHex(hash)); // 928c3f25193b338b89d5646bebbfa2436c5daa1d189f9c565079dcae379a43be
-    return hash;
-}
+        const publicKey = secp.getPublicKey(PRIVATE_KEY);
 
-module.exports = hashMessage;
+        const recovered = await recover('hello world', sig, recoveryBit);
+
+        assert.equal(toHex(recovered), toHex(publicKey));
+    });
+});
