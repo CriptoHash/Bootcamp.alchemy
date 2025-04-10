@@ -1,0 +1,12 @@
+Objetivo?
+  - Obter um endereço Ethereum
+  
+Vamos obter o endereço Ethereum da chave pública!
+
+Primeiro passo: 
+  - Você precisará extrair o primeiro byte da chave pública. 
+  - O primeiro byte indica o formato da chave, se está compactada ou não.
+  - A publicKey será um valor numérico, Uint8Array então você pode usar o método slice para extrair o primeiro byte.
+  - Em seguida, pegue o keccakhash do restante da chave pública.
+  - Por fim, pegue os últimos 20 bytes do hash keccak e retorne isso. 
+    - Novamente, você pode usar o método slice .
