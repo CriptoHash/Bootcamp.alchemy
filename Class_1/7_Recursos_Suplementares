@@ -1,0 +1,26 @@
+Recursos suplementares sobre assinaturas digitais
+
+  ECDSA
+    - https://blog.cloudflare.com/ecdsa-the-digital-signature-algorithm-of-a-better-internet/
+    - https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm
+    - https://cryptobook.nakov.com/digital-signatures/ecdsa-sign-verify-messages
+
+  Bitcoin
+    - https://en.bitcoin.it/wiki/Secp256k1
+    - https://en.bitcoin.it/wiki/Invoice_address
+    - https://en.bitcoin.it/wiki/Technical_background_of_version_1_Bitcoin_addresses#:~:text=A%20Bitcoin%20address%20is%20a,that%20the%20signature%20is%20valid.
+
+  Troca de chaves Diffie-Hellman
+    - https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange
+    - https://security.stackexchange.com/questions/41205/diffie-hellman-and-its-tls-ssl-usage/41226#41226
+    - https://www.youtube.com/watch?v=NmM9HA2MQGI
+    - https://www.youtube.com/watch?v=Yjrfm_oRO0w
+    - https://www.youtube.com/watch?v=NF1pwjL9-DE
+    
+  RSA
+    - https://en.wikipedia.org/wiki/RSA_cryptosystem
+    - https://cryptobook.nakov.com/digital-signatures/rsa-signatures
+    - https://www.youtube.com/watch?v=4zahvcJ9glg 
+    - https://www.youtube.com/watch?v=oOcTVTpUsPQ
+    
+  
