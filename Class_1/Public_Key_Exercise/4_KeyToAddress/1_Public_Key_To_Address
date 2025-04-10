@@ -1,0 +1,9 @@
+Chave pública para endereço
+
+  Tanto o Bitcoin quanto o Ethereum possuem um processo de transformação para pegar uma chave pública e transformá-la em um endereço.
+  
+    No caso do Bitcoin, isso inclui uma soma de verificação e codificação Base58 .
+    
+    A transformação de endereço do Ethereum é bem mais simples: seu endereço corresponde aos últimos 20 bytes do hash da chave pública.
+  
+  O importante a reconhecer aqui é que o endereço é diferenciado da chave pública, mas você sempre pode derivar o endereço se tiver a chave pública.
