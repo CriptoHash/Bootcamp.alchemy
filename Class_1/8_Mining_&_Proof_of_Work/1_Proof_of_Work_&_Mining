@@ -1,0 +1,35 @@
+Prova de Trabalho e Mineração
+
+  Redes de blockchain, como Ethereum, são essencialmente bancos de dados distribuídos e descentralizados.
+    - Compostos por muitos nós (computadores interligados).
+
+  Em um ambiente descentralizado, os problemas comuns são:
+
+    - Como todos os nós concordam sobre o estado atual e futuro dos saldos de contas de usuários e interações contratuais?
+    - Quem pode adicionar novos blocos/transações a uma cadeia? Como sabemos se os blocos adicionados são "válidos"?
+    - Como diabos todas essas coisas são coordenadas sem um ator central no lugar?
+
+      A resposta é: Mecanismos de consenso.
+
+Mecanismos de Consenso
+
+  Consenso significa chegar a um acordo geral. 
+  O consenso em blockchain normalmente significa que pelo menos 51% dos nós estão de acordo sobre o estado global atual da rede.
+  Mecanismos de consenso acabam sendo simplesmente regras que uma rede blockchain distribuída e descentralizada segue para manter o acordo sobre o que é considerado válido.
+  Lembre-se de que mecanismos de consenso são intercambiáveis ​​e existem muitos outros que ainda não abordamos, como o proof-of-stake.
+
+    As principais regras de consenso para prova de trabalho geralmente se parecem com mandamentos religiosos:
+
+      - Você não pode gastar duas vezes.
+      - A cadeia "mais longa" será aquela que os demais nós aceitarem como a única cadeia "verdadeira", determinada pelo trabalho cumulativo da cadeia. 
+        - Também conhecido como Consenso de Nakamoto .
+      - Sendo uma rede blockchain, o Bitcoin utiliza um mecanismo de consenso chamado proof-of-work . 
+      - O Ethereum utilizava anteriormente proof-of-work, mas desde então migrou para proof-of-stake .
+
+Prova de Trabalho
+
+  Prova de trabalho é o mecanismo de consenso que permite que redes descentralizadas como Bitcoin e (anteriormente) Ethereum cheguem a um consenso, ou concordem sobre questões como saldos de contas e a ordem das transações.
+  Isso evita que os usuários gastem suas moedas em dobro e garante que todos sigam as regras, tornando as redes baseadas em prova de trabalho resistentes a ataques.
+  O mecanismo de consenso acaba fornecendo segurança a uma rede blockchain simplesmente porque exige que todos sigam as regras de consenso se quiserem participar!
+  
+    - Na prova de trabalho, a mineração é o "trabalho" em si.
