@@ -1,0 +1,63 @@
+Mineração
+
+  - Mineração é o processo de criação de um bloco de transações a serem adicionadas a um blockchain.
+  
+  - Mas como isso se relaciona com a prova de trabalho? 
+      - Bem, a prova de trabalho também poderia ser chamada de prova de mineração!
+      - O termo mineração faz alusão a mineração de ouro, onde os mineradores disponham energia e recursos na busca do metal.
+
+  No consenso de prova de trabalho, os nós da rede tentam continuamente estender a cadeia com novos blocos.
+    - Estes são apelidados de mineradores, nós que contêm o software de mineração.
+  Os mineradores são responsáveis por estender uma blockchain adicionando novos blocos que contêm transações "válidas".
+  Para adicionar um bloco, a rede solicitará aos mineradores sua "prova de trabalho".
+
+  Um sistema baseado em prova de trabalho normalmente exige que os mineradores produzam uma saída em uma faixa-alvo muito difícil de ser obtida.
+  Uma prova de trabalho válida atualmente se pareceria com isto na rede Bitcoin:
+  
+    0000000000000000000043f43161dc56a08ffd0727df1516c987f7b187f5194c6
+
+  E como o minerador consegue a prova de trabalho e seu resultado?
+
+    - O software de mineração automatizada tem uma função: 
+        - Pegar um dado (ou seja, o cabeçalho do bloco anterior + novas transações para adicionar a uma cadeia) e fazer um hash . 
+        - Se o resultado do hash estiver abaixo de uma dificuldade alvo, o minerador encontrou a resposta para o quebra-cabeça: uma prova de trabalho válida.
+
+  A prova de trabalho mostrada acima tem 19 zeros à esquerda - isso é bastante!
+    scream: Como o intervalo de cada caractere possível por espaço é em hexadecimal, isso significa que temos 1/16 possibilidades de caracteres por espaço.
+
+  As saídas de hash para SHA-256 estão em hexadecimal, o que significa que temos 1/16 caracteres possíveis por espaço:
+    – a-f em letras e 0-9 em decimais = 16 possibilidades no total. 
+    - Isso significa que encontrar uma saída SHA-256 de 32 bytes com apenas UM zero à esquerda levará, em média, 16 tentativas.
+    - Experimente agora com qualquer entrada aleatória! 
+      - Quantas tentativas você levou para encontrar uma saída com um zero à esquerda?
+
+    O problema é:
+      - Que, à medida que aumentamos a dificuldade, as coisas começam a ficar mais difíceis.
+        - Encontrar uma saída com 2 zeros à esquerda aumenta a média de tentativas para 256 - 16 caracteres possíveis na primeira posição * 16 caracteres possíveis na segunda posição.
+        - Encontrar 19 zeros à esquerda exigirá, em média, 75557863725914323419136000000000000000000000 tentativas.
+        
+  Redes de prova de trabalho normalmente possuem algum tipo de target_difficulty. 
+  Para que um minerador adicione um novo bloco, ele deve encontrar uma prova de trabalho menor que a dificuldade alvo da rede. É basicamente a rede dizendo: "Se você quiser adicionar um novo bloco, deve fornecer uma prova de trabalho com 12 zeros à esquerda". Da forma como a matemática funciona, encontrar uma saída tão difícil de encontrar é prova suficiente de que um minerador gastou recursos consideráveis ​​para proteger a rede. Não há como burlar o sistema; ou você tem uma prova de trabalho válida ou não.
+
+    Veja como é o algoritmo de mineração de prova de trabalho:
+
+        1 - Pegue o cabeçalho do bloco atual e adicione transações do mempool
+        2 - Adicione um nonce, começando em nonce = 0
+        3 - Dados de hash de #1 e #2
+        4 - Verifique a dificuldade do hash em relação ao alvo (fornecido pelo protocolo)
+        5 - Se hash < target, o quebra-cabeça está resolvido! Ganhe uma recompensa.
+        3 - Caso contrário, reinicie o processo a partir da etapa 2, mas incremente o nonce
+      
+  Os nós mineradores em uma rede de prova de trabalho executarão esse algoritmo regularmente.
+  Isso permite que a rede reconheça o verdadeiro estado e a validade das transações propostas, seguindo as regras de consenso.
+  Enquanto a maioria dos nós da rede seguir as regras de consenso, a blockchain: 
+      - Permanecerá segura e resistente a ataques, 
+      - Irá garantir que apenas transações válidas e verificadas sejam adicionadas ao livro-razão distribuído,
+      - Irá manter assim sua integridade e confiabilidade.
+
+  Por que os mineradores gastam recursos para proteger uma rede blockchain baseada em prova de trabalho, como Ethereum ou Bitcoin?
+    - Em troca da grande quantidade de energia e manutenção de hardware necessárias para executar o software de mineração, os mineradores recebem moeda como recompensa.
+    - Se as regras de consenso forem seguidas, criando uma rede segura, os mineradores são pagos.
+
+Conclusão
+  - Na prova de trabalho, os mineradores devem apresentar uma prova (na forma de uma saída de hash em dados de entrada válidos) de que gastaram energia para "minerar" um bloco com sucesso e fazer com que ele estendesse uma blockchain.
