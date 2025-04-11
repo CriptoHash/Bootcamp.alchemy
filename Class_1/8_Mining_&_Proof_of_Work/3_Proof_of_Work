@@ -1,0 +1,7 @@
+Prova de Trabalho
+
+  Prova de trabalho é o mecanismo de consenso que permite que redes descentralizadas como Bitcoin e (anteriormente) Ethereum cheguem a um consenso, ou concordem sobre questões como saldos de contas e a ordem das transações.
+  Isso evita que os usuários gastem suas moedas em dobro e garante que todos sigam as regras, tornando as redes baseadas em prova de trabalho resistentes a ataques.
+  O mecanismo de consenso acaba fornecendo segurança a uma rede blockchain simplesmente porque exige que todos sigam as regras de consenso se quiserem participar!
+  
+    - Na prova de trabalho, a mineração é o "trabalho" em si.
