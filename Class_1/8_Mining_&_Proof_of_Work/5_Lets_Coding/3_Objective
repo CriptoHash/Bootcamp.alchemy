@@ -1,0 +1,13 @@
+Objetivo: adicionar transação
+
+  Seu objetivo é implementar a addTransaction função que adiciona transações ao mempool.
+  
+    - Pegue o transaction enviado para a função e coloque-o no topo do mempool array.
+
+Melhorias possíveis posteriores:
+
+  - Dependendo da aplicação, você talvez queira:
+  - Validar a transação antes de adicioná-la
+  - Verificar se a transação já está no mempool
+  - Limitar o tamanho do mempool
+  - Emitir algum evento ou log para monitoramento
