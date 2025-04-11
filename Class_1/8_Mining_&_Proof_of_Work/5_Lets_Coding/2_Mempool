@@ -1,0 +1,10 @@
+Mempool
+
+  Usuários que desejam realizar transações transmitem suas transações para a rede blockchain.
+  O mempool é um local onde os mineradores armazenam essas transações antes de adicioná-las a um bloco.
+  
+    Normalmente, o minerador pega todas as transações com as taxas de transação mais altas do mempool.
+    Em seguida, ele as adiciona ao bloco e tenta encontrar a prova de trabalho.
+
+      Mais informações de prioridades de taxas:
+        - https://en.bitcoin.it/wiki/Miner_fees#Priority_transactions
